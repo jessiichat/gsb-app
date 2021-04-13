@@ -1,21 +1,33 @@
 <template>
-  <img alt="Vue logo" src="./assets/images/logo.svg">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+      <navbar></navbar>
+      <router-view v-bind:user="user"></router-view>
+      <footerApp></footerApp>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import navbar from '@/components/navbar'
+import footerApp from '@/components/footer'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    navbar,
+    footerApp
+  },
+  data(){
+    return{
+        user: null
+    }
+  },
+  mounted(){
+      this.user = localStorage.getItem('username')
   }
 }
 </script>
 
 <style>
-#app {
+#app {  
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
