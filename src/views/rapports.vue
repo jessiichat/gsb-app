@@ -1,5 +1,4 @@
 <template>
-
     <main>
         <section class="flex">
             <div id="contenuHaut">
@@ -33,7 +32,6 @@
             </div>
         </section>
     </main>
-
 </template>
 
 <script>

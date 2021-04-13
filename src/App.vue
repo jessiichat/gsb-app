@@ -1,16 +1,12 @@
 <template>
       <navbar v-bind:user="user"></navbar>
       <router-view v-bind:user="user"/>
-
       <!-- <router-view v-bind:user="user"></router-view> -->
       <!-- <footerApp></footerApp> -->
-
 </template>
-
 <script>
 import navbar from '@/components/navbar'
 // import footerApp from '@/components/footer'
-
 export default {
   name: 'App',
   components: {
@@ -27,7 +23,6 @@ export default {
   }
 }
 </script>
-
 <style>
 #app {
   background-color: #625D6F;
@@ -187,15 +182,15 @@ input{
   width: 30%;
   padding: 0.5em 2em;
 }
-input[type=“radio”]{
+input[type="radio"]{
   width: 2rem;
   height: 2rem;
   margin-right: 1em;
 }
-input[type=“radio”] + label {
+input[type="radio"] + label {
   margin-right: 1em;
 }
-input[type=“number”]{
+input[type="number"]{
   padding: 0 1em;
   margin-left: 5rem;
 }
@@ -227,18 +222,18 @@ textarea:hover{
 }
 /* BEFORE ET AFTER */
 .usersList::after{
-  content: “”;
+  content: "";
   display: block;
   margin: 2em 0;
   border-bottom: 1px solid #474350;
 }
 .usersList:last-child::after {
-  content: “”;
+  content: "";
   display: none;
 }
 .formGroup::before,
 .rapportDetailsGroup::before {
-  content: “”;
+  content: "";
   position: absolute;
   width: 0;
   height: 0;
