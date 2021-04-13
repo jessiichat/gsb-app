@@ -11,10 +11,44 @@
 
 <script>
 export default {
-
+  data(){
+    return{
+      login: '',
+      password: '',
+      error: null
+    }
+  },
+  methods:{
+    connect: async function(){
+      const cryptedData = window.btoa(this.login + ':' + this.password)
+      await fetch('http://localhost:90/gsb/user/' + this.login.toLowerCase(), {
+        method: 'GET',
+        headers:{
+          "Content-type": "application/json",
+          "Authorization": "Basic " + cryptedData
+        },
+        credentials: "include"
+      })
+      .then((response) => {
+        if(response.status === 401){
+          this.error = 'Bad login or password'
+          console.log('Unauthorized')
+        }else{
+          this.$router.push('/')
+          localStorage.setItem('username', this.login)
+          console.log('user connecté')
+          return response.json()
+        } 
+      })
+      .then((data) => {
+        console.log(data)
+      })
+    }
+  }
 }
 </script>
 
 <style>
-
+    @import 'layout.css';
+    @import 'layout-responsive.css';
 </style>

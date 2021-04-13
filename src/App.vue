@@ -1,6 +1,8 @@
 <template>
       <navbar></navbar>
-      <router-view v-bind:user="user"></router-view>
+      <router-view />
+
+      <!-- <router-view v-bind:user="user"></router-view> -->
       <!-- <footerApp></footerApp> -->
 
 </template>
@@ -15,14 +17,14 @@ export default {
     navbar,
     // footerApp
   },
-  data(){
-    return{
-        user: null
-    }
-  },
-  mounted(){
-      this.user = localStorage.getItem('username')
-  }
+  // data(){
+  //   return{
+  //       user: null
+  //   }
+  // },
+  // mounted(){
+  //     this.user = localStorage.getItem('username')
+  // }
 }
 </script>
 
@@ -33,66 +35,66 @@ export default {
   font-size: 1.6rem;
 }
 .flex{
-display: flex;
-justify-content: space-between;
-align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .btn{
-border-radius: 25px;
-border: 1px solid white;
-padding: 0.5em 3em;
+  border-radius: 25px;
+  border: 1px solid white;
+  padding: 0.5em 3em;
 }
 .cta {
-border: none;
-background-color: rgba(255, 207, 86, 0.8);
-color: #474350;
+  border: none;
+  background-color: rgba(255, 207, 86, 0.8);
+  color: #474350;
 }
 .validation{
-background: rgba(134, 186, 161, 0.8);
-width: 100%;
-margin-top: 2em;
-padding: 1em;
+  background: rgba(134, 186, 161, 0.8);
+  width: 100%;
+  margin-top: 2em;
+  padding: 1em;
 }
 .card {
-background-color: white;
-border-radius: 25px;
-width: 30%;
+  background-color: white;
+  border-radius: 25px;
+  width: 30%;
 }
 .cardTitle {
-margin-top: 1em;
-margin-left: 2em;
-color: #474350;
+  margin-top: 1em;
+  margin-left: 2em;
+  color: #474350;
 }
 .formGroup,
 .rapportDetailsGroup{
-flex-flow: row wrap;
-position: relative;
+  flex-flow: row wrap;
+  position: relative;
 }
 .formGroup input{
-padding: 0;
-border-radius: 0;
-border: 1px solid lightgray;
-border-bottom: 1px solid #474350;
+  padding: 0;
+  border-radius: 0;
+  border: 1px solid lightgray;
+  border-bottom: 1px solid #474350;
 }
 .formGroupHeader,
 .rapportDetailsGroupHeader{
-background-color: white;
-padding: 2em 6em 0;
+  background-color: white;
+  padding: 2em 6em 0;
 }
 .formGroupHeader > div.flex,
 .rapportDetailsGroupHeader > div.flex{
-margin-top: 1rem;
-width: 50%;
+  margin-top: 1rem;
+  width: 50%;
 }
 .formGroupBody,
 .rapportDetailsGroupBody{
-background-color: white;
-position: absolute;
-width: 100%;
+  background-color: white;
+  position: absolute;
+  width: 100%;
 }
 .formGroupBody > div,
 .rapportDetailsGroupBody > div {
-margin-top: 2rem;
+  margin-top: 2rem;
 }
 /*
 *
@@ -103,12 +105,12 @@ margin-top: 2rem;
 */
 *
 {
-margin: 0;
-padding: 0;
--webkit-font-smoothing : antialiased;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing : antialiased;
 }
 html{
-font-size: 62.5%;
+  font-size: 62.5%;
 }
 header {
   background-color: #474350;
@@ -127,75 +129,75 @@ h1, h2, h3, h4{
   font-family: 'Space Grotesk', sans-serif;
 }
 h1 {
-    font-size: 4rem;
+  font-size: 4rem;
 }
 h2 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 h3 {
-    font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 h4 {
-    font-size: 1.6rem;
+  font-size: 1.6rem;
 }
 a{
-    text-decoration: none;
-    color: #474350;
+  text-decoration: none;
+  color: #474350;
 }
 em {
-    font-style: italic;
+  font-style: italic;
 }
 b {
-    font-weight: bold;
+  font-weight: bold;
 }
 /* LISTES ET ICONOGRAPHIE */
 ul {
-    font-weight: 100;
+  font-weight: 100;
 }
 li {
-    list-style: none;
-    margin: 1em 0 1em 3em;
+  list-style: none;
+  margin: 1em 0 1em 3em;
 }
 .logo {
-    height: 100%;
+  height: 100%;
 }
 hr {
-    margin: 2em 0 0;
-    border: none;
-    height: 1px;
-    background-color: #474350;
+  margin: 2em 0 0;
+  border: none;
+  height: 1px;
+  background-color: #474350;
 }
 /* FORMULAIRE */
 form{
-    margin-top: 5vh;
+  margin-top: 5vh;
 }
 fieldset{
-    border: none;
+  border: none;
 }
 textarea{
-    width: 100%;
-    border: 1px solid lightgray;
-    border-bottom: 1px solid #474350;
-    padding: 0.5em;
+  width: 100%;
+  border: 1px solid lightgray;
+  border-bottom: 1px solid #474350;
+  padding: 0.5em;
 }
 input{
-    border: none;
-    border-radius: 25px;
-    height: 3em;
-    width: 30%;
-    padding: 0.5em 2em;
+  border: none;
+  border-radius: 25px;
+  height: 3em;
+  width: 30%;
+  padding: 0.5em 2em;
 }
 input[type=“radio”]{
-    width: 2rem;
-    height: 2rem;
-    margin-right: 1em;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1em;
 }
 input[type=“radio”] + label {
-    margin-right: 1em;
+  margin-right: 1em;
 }
 input[type=“number”]{
-    padding: 0 1em;
-    margin-left: 5rem;
+  padding: 0 1em;
+  margin-left: 5rem;
 }
 select{
   padding: 0.5em 0;

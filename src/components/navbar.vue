@@ -16,7 +16,7 @@
             <a href="addRapport.html">Ajout Rapport</a>
         </li>
         <li>
-            <a href="rapports.html">Rapports</a>
+            <router-link class="nav-link" to="/rapports">Rapports</router-link>
         </li>
         <li>
             <a href="#" class="btn" id="signOutButton"> Déconnexion </a>
