@@ -1,10 +1,10 @@
 <template>
   <main class="flex" id="authentication">
         <logo></logo>
-        <form class="flex" action="" method="">
+        <form @submit.prevent="connect" class="flex" action="" method="">
             <input type="text" v-model="user" aria-label="Login" placeholder="Login">
-            <input type="text" v-model="password" aria-label="Mot de passe" placeholder="Mot de passe">
-            <button class="btn cta">S'authentifier</button>
+            <input type="password" v-model="password" aria-label="Mot de passe" placeholder="Mot de passe">
+            <button type="submit" class="btn cta">S'authentifier</button>
         </form>
     </main>
 </template>
@@ -20,6 +20,7 @@ export default {
   },
   methods:{
     connect: async function(){
+      //console.log('Connexion : ' + this.user + this.password)
       const cryptedData = window.btoa(this.login + ':' + this.password)
       await fetch('http://localhost:90/gsb/user/' + this.login.toLowerCase(), {
         method: 'GET',
