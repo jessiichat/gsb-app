@@ -19,7 +19,8 @@
             <router-link class="nav-link" to="/rapports">Rapports</router-link>
         </li>
         <li>
-            <a href="#" class="btn" id="signOutButton"> Déconnexion </a>
+            <router-link v-if="!user" class="btn" id="signInButton" to="/login">Connexion</router-link>
+            <router-link v-if="user" class="btn" id="signOutButton" to="/logout">Déconnexion</router-link>
         </li>
     </ul>
   </nav>
@@ -33,6 +34,12 @@ export default{
     components: {
         logo
     },
+    data(){
+        return{
+      
+        }
+    },
+    props:['user']
 }
 </script>
 

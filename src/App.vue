@@ -1,6 +1,6 @@
 <template>
-      <navbar></navbar>
-      <router-view />
+      <navbar v-bind:user="user"></navbar>
+      <router-view v-bind:user="user"/>
 
       <!-- <router-view v-bind:user="user"></router-view> -->
       <!-- <footerApp></footerApp> -->
@@ -17,14 +17,14 @@ export default {
     navbar,
     // footerApp
   },
-  // data(){
-  //   return{
-  //       user: null
-  //   }
-  // },
-  // mounted(){
-  //     this.user = localStorage.getItem('username')
-  // }
+  data(){
+    return{
+        user: null
+    }
+  },
+  mounted(){
+      this.user = localStorage.getItem('username')
+  }
 }
 </script>
 
