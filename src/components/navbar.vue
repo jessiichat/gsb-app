@@ -29,7 +29,10 @@
 import logo from './logo.vue';
 
 export default{
-    name: 'navbar'
+    name: 'navbar',
+    components: {
+        logo
+    },
 }
 </script>
 
