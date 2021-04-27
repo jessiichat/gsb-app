@@ -19,7 +19,7 @@ export default {
     }
   },
   mounted(){
-      this.user = localStorage.getItem('username')
+      this.user = localStorage.getItem('username');
   }
 }
 </script>

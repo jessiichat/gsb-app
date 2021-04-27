@@ -3,7 +3,7 @@
     <section class="flex">
         <div id="contenuHaut">
             <p id="date"> 01 février 2021</p>
-            <h1> Bonjour Marie </h1>
+            <h1> Bonjour {{ getLogin }} </h1>
         </div>
         <a href="addUser.html" class="btn cta">Ajouter un rapport </a>
         <input type="search" aria-label="Rechercher des rapports" placeholder="Rechercher des rapports">
@@ -13,7 +13,12 @@
 
 <script>
 export default {
-
+    //props:['user']
+    computed: {
+            getLogin: function() {
+                return this.$store.getters.getLoginFromStore
+            }
+    }
 }
 </script>
 
